@@ -73,3 +73,12 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](LICENSE).
+  
+  
+ 
+ 
+> 타입스크립트 1도 모르는 개발자가 nest js tutorial 따라해보기!!!!  
+>> 1일차 느낀점  
+>> 데코레이터가 뭔지 알아봐야 할 듯함. (java annotation 느낌난다???)
+>> express와는 다르게 default로 설치되는 package들이 많다. lint도 자동으로 적용되어있다. 
+>> 아직은 장점을 잘 모르겠다.
