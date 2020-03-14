@@ -78,9 +78,14 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
  
 
 
-# 타입스크립트 1도 모르는 개발자가 nest js tutorial 따라해보기!!!!  
+# 타입스크립트 1도 모르는 개발자... nest js tutorial 따라해보기!!!!  
 
 ## 1일차 느낀점  
 > 데코레이터가 뭔지 알아봐야 할 듯함. (java annotation 느낌난다???)  
 > express와는 다르게 default로 설치되는 package들이 많다. lint도 자동으로 적용되어있다.   
 > 아직은 장점을 잘 모르겠다.  
+
+
+## 2일차 느낀점  
+> 말로 듣던 dto를 사용해 봤다. 왜 쓰는지는 잘 모르겠다.  
+> 다른 method들로도 요청을 해봤다. 데코레이터가 있어서 그런지 핸들러의 응답 action을 간단하게 알 수 있는 느낌이었다. (미리보기 같은 느낌)    
