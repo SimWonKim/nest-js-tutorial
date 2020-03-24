@@ -89,3 +89,10 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## 2일차 느낀점  
 > 말로 듣던 dto를 사용해 봤다. 왜 쓰는지는 잘 모르겠다.  
 > 다른 method들로도 요청을 해봤다. 데코레이터가 있어서 그런지 핸들러의 응답 action을 간단하게 알 수 있는 느낌이었다. (미리보기 같은 느낌)    
+
+
+
+## 3일차 느낀점  
+> 다른 샘플들을 보니 DTO와 함께 validation을 사용하는것 같던데 더 다양한 예제들을 봐야 겠다.  
+> 의존성주입에 대해 구글링을 해봤다. 긴단하게 정리하면 내부의 로직이 외부에서 받은 값에 상관없이 동작하기 위해 만든 일종의 디자인 패턴이다. 재활용성을 높이기 위한 목적이 큰듯 하다.   
+> Custom provider는 overview에서 디테일하게 다루기에는 큰 내용인듯 하다.      
