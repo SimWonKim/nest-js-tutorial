@@ -5,11 +5,11 @@ import { Cat } from './interface/cats.interface';
 
 @Controller('cats')
 export class CatsController {
-    constructor(private catsService: CatsService) { }
+    constructor(private catsService: CatsService) {}
 
     @Post()
     @HttpCode(201)
-    async create(@Body() createCatDto : CreateCatDto) {
+    async create(@Body() createCatDto: CreateCatDto) {
         this.catsService.create(createCatDto);
     }
 
@@ -18,8 +18,6 @@ export class CatsController {
     async findAll(): Promise<Cat[]> {
         return this.catsService.findAll();
     }
-
-
 
     // @Post()
     // async create(@Body() createCatDto : CreateCatDto) {
@@ -55,11 +53,9 @@ export class CatsController {
     // //     return name;
     // // }
 
-
-
     // @Put()
     // @HttpCode(200)
     // updateCats(@Body('id') id, @Body('name') name) {
     //     return { id, name };
-    // } 
+    // }
 }
