@@ -1,22 +1,57 @@
-import { Controller, Get, Post, Body, HttpCode } from '@nestjs/common';
+import {
+    Controller,
+    Get,
+    Post,
+    Body,
+    HttpCode,
+    HttpException,
+    HttpStatus,
+    ValidationPipe,
+    UsePipes,
+    Param,
+    ParseIntPipe,
+    UseGuards,
+    SetMetadata,
+} from '@nestjs/common';
 import { CreateCatDto } from './dto/create-cat.dto';
 import { CatsService } from './cats.service';
 import { Cat } from './interface/cats.interface';
+import { RolesGuard } from 'common/guard/roles.guard';
+import { Roles } from 'common/decorator/role.decorator';
 
+@UseGuards(RolesGuard)
 @Controller('cats')
 export class CatsController {
     constructor(private catsService: CatsService) {}
 
     @Post()
+    @UsePipes(ValidationPipe)
+    @Roles('admin')
     @HttpCode(201)
     async create(@Body() createCatDto: CreateCatDto) {
         this.catsService.create(createCatDto);
     }
 
-    @Get()
+    // @Get()
+    // @HttpCode(200)
+    // async findAll(): Promise<Cat[]> {
+    //     return this.catsService.findAll();
+    // }
+
+    @Get(':id')
     @HttpCode(200)
-    async findAll(): Promise<Cat[]> {
-        return this.catsService.findAll();
+    async findOne(@Param('id', new ParseIntPipe()) id) {
+        return id;
+        // throw new HttpException('Frobidden', HttpStatus.FORBIDDEN);
+        // 예외처리를 생성하기 위해 인자 2개 필요(1. 메시지 2.응답코드)
+        // throw new HttpException(
+        //     {
+        //         status: HttpStatus.FORBIDDEN,
+        //         error: 'This is a custom message',
+        //     },
+        //     HttpStatus.FORBIDDEN,
+        // );
+        // 응답 메시지를 커스텀 할 수 있는 예외처리 방법.
     }
 
     // @Post()
